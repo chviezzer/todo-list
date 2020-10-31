@@ -1,7 +1,7 @@
  
 let todoItems = [];
 
-// Create a new todo object based on the text that was entered in the text input 
+// Crea un nuevo objeto todo  
 
 function addTodo(text) {
     const todo = {
@@ -14,7 +14,7 @@ function addTodo(text) {
     renderTodo(todo);
   }
 
-// Select the form element
+// Seleccione el elemento en el formulario
 const form = document.querySelector('.js-form');
  
 form.addEventListener('submit', event => {
@@ -23,7 +23,7 @@ form.addEventListener('submit', event => {
    
   const input = document.querySelector('.js-todo-input');
 
-  // Get the value of the input and remove whitespace
+  // Obtenga el valor de la entrada  
   const text = input.value.trim();
   if (text !== '') {
     addTodo(text);
@@ -83,14 +83,14 @@ function toggleDone(key) {
   }
 
   function deleteTodo(key) {
-    // find the corresponding todo object in the todoItems array
+   // encuentra el objeto todo correspondiente en el array todoItems
     const index = todoItems.findIndex(item => item.id === Number(key));
      
     const todo = {
       deleted: true,
       ...todoItems[index]
     };
-    // remove the todo item from the array by filtering it out
+    // elimina el elemento de todo del array
     todoItems = todoItems.filter(item => item.id !== Number(key));
     renderTodo(todo);
   }
