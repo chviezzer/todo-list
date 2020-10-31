@@ -1,0 +1,131 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+   font-family:'Shadows Into Light Two', cursive;
+   line-height: 1.4;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333;
+    height: 90vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    overflow-y: auto;
+    background-color: #5181FA;
+  }
+  
+  .app-title {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 80px;
+    opacity: 0.6;
+  }
+  
+  svg {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .todo-list {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .todo-item {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    /* border: 1px solid black; */
+    background-color: #64C5D6;
+    box-shadow: rgb(143, 226, 222) 0px 3px 5px 0px, rgba(0, 0, 0, 0.3) 0px 0px 8px;   
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .todo-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 22px;
+  }
+  
+  .done span {
+    text-decoration: line-through;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  .tick {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .tick::before {
+    content: "✓";
+    font-size: 20px;
+    display: none;
+  }
+  
+  .done .tick::before {
+    display: inline;
+  }
+  
+  .delete-todo {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    
+  }
+  
+  .delete-todo svg {
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+  }
+ 
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  input[type="text"] {
+    font-family:'Shadows Into Light Two', cursive;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid;
+    border-color: rgb(100, 216, 237);
+  }
